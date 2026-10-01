@@ -1,0 +1,15 @@
+{
+  "name": "wavebrook",
+  "displayName": "Wavebrook",
+  "version": "0.1.0",
+  "description": "Ask about your NetSignal SDK apps, earnings and payouts in the Wavebrook Dashboard",
+  "author": {
+    "name": "Wavebrook Analytics Ltd",
+    "email": "contact@wavebrook.com",
+    "url": "https://wavebrook.com"
+  },
+  "homepage": "https://github.com/wavebrook/ai-plugins",
+  "repository": "https://github.com/wavebrook/ai-plugins",
+  "license": "MIT",
+  "keywords": ["wavebrook", "netsignal-sdk", "mcp", "publisher", "earnings", "payouts"]
+}

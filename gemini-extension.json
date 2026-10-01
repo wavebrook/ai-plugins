@@ -1,0 +1,11 @@
+{
+  "name": "wavebrook",
+  "version": "0.1.0",
+  "description": "Ask about your NetSignal SDK apps, earnings and payouts in the Wavebrook Dashboard",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "wavebrook": {
+      "httpUrl": "https://dashboard.wavebrook.com/api/mcp"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "wavebrook",
+  "owner": {
+    "name": "Wavebrook Analytics Ltd",
+    "email": "contact@wavebrook.com"
+  },
+  "metadata": {
+    "description": "Wavebrook plugins for AI assistants"
+  },
+  "plugins": [
+    {
+      "name": "wavebrook",
+      "source": "plugins/wavebrook",
+      "description": "Ask about your NetSignal SDK apps, earnings and payouts in the Wavebrook Dashboard"
+    }
+  ]
+}

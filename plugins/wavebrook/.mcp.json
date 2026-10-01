@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wavebrook": {
+      "type": "http",
+      "url": "https://dashboard.wavebrook.com/api/mcp"
+    }
+  }
+}
