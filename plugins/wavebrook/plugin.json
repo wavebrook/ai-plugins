@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wavebrook",
-  "version": "0.1.0",
-  "description": "Ask about your NetSignal SDK apps, earnings and payouts in the Wavebrook Dashboard",
+  "version": "1.0.0",
+  "description": "Ask about your NetSignal SDK apps, statistics, earnings, payouts and invoices in the Wavebrook Dashboard.",
   "author": {
     "name": "Wavebrook Analytics Ltd",
-    "email": "contact@wavebrook.com",
+    "email": "hello@wavebrook.com",
     "url": "https://wavebrook.com"
   },
-  "homepage": "https://github.com/wavebrook/ai-plugins",
+  "homepage": "https://wavebrook.com/ai-assistants",
   "repository": "https://github.com/wavebrook/ai-plugins",
   "license": "MIT",
   "keywords": ["wavebrook", "netsignal-sdk", "mcp", "publisher", "earnings", "payouts"],
@@ -16,19 +16,87 @@
     "com.openai": {
       "interface": {
         "displayName": "Wavebrook",
-        "shortDescription": "Your NetSignal SDK apps, earnings and payouts",
-        "longDescription": "Connect your Wavebrook Dashboard account. Ask how your apps are doing, what you earned this month, why traffic dropped or what's holding up a payout. Read-only unless you also let it make changes when you sign in.",
+        "shortDescription": "Your NetSignal SDK earnings",
+        "longDescription": "Wavebrook pays mobile-app publishers for integrating the NetSignal SDK, which collects network telemetry with each end user's consent. This app brings your Wavebrook Dashboard account into the conversation.\n\nAsk how your apps are doing: DAU, location DAU, consent and location rates, and the countries your users are in. Compare periods, see which Partners earned the most and from which apps, and check your payouts. Get a download link for any invoice. Find out what needs your attention, such as updated terms, a privacy policy missing our disclosure, or an app that stopped sending data. See which NetSignal SDK versions your apps run.\n\nIf you allow changes when you connect, it can also add an app from its store link, rename an app, refresh it from the store and mark notifications as read. It can't accept terms, change payout details or delete anything.\n\nYou need a Wavebrook Dashboard account. It only sees your own account, and you can disconnect it at any time in Account, Connected apps.",
         "developerName": "Wavebrook Analytics Ltd",
         "category": "Productivity",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "App statistics and reports",
+          "Earnings by Partner and app",
+          "Payouts and invoices",
+          "Account health checks",
+          "Add and rename apps"
+        ],
         "websiteURL": "https://wavebrook.com",
+        "supportURL": "https://wavebrook.com/ai-assistants",
         "privacyPolicyURL": "https://wavebrook.com/privacy",
         "termsOfServiceURL": "https://wavebrook.com/terms",
         "defaultPrompt": [
-          "How much did my apps earn last month, by Partner?",
-          "Why did DAU drop on my top app this week?",
-          "What's blocking my next payout?"
-        ]
+          "Does anything on my Wavebrook account need my attention?",
+          "Which Partners earned the most last month, and from which apps?",
+          "Get me the invoice for my last payout."
+        ],
+        "brandColor": "#024349",
+        "brandColorDark": "#74F1A5",
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Account health: what needs the publisher's attention",
+              "prompt": "Does anything on my Wavebrook account need my attention?",
+              "tools_triggered": "get_account_health",
+              "expected_behavior": "Calls get_account_health and says nothing is flagged on the test account (it lists each issue with what to do when there are any)."
+            },
+            {
+              "description": "Earnings for a month, by Partner and app",
+              "prompt": "What did I earn in July, by Partner?",
+              "tools_triggered": "get_earnings",
+              "expected_behavior": "Calls get_earnings for 2026-07 and reports US$684.85 in total, all from Demo Partner, with Signal Weather Demo earning US$473.55 and Signal Runner Demo US$211.30."
+            },
+            {
+              "description": "Payouts and an invoice download link",
+              "prompt": "Show my payouts and get the invoice for the latest one.",
+              "tools_triggered": "list_payouts, get_invoice",
+              "expected_behavior": "Calls list_payouts (one paid payout of US$1,242.65), then get_invoice for it: invoice TEST-0001 with a download link to the PDF that expires after 15 minutes."
+            },
+            {
+              "description": "App statistics over the last 30 days",
+              "prompt": "How is Signal Weather Demo doing over the last 30 days?",
+              "tools_triggered": "list_apps, get_app_stats",
+              "expected_behavior": "Finds the app with list_apps, then calls get_app_stats and reports average DAU and location DAU with their change against the previous 30 days, consent about 82%, location about 55%, and top countries GB, ES, US and DE."
+            },
+            {
+              "description": "NetSignal SDK versions per app",
+              "prompt": "Which NetSignal SDK versions are my apps running?",
+              "tools_triggered": "get_app_sdk_versions",
+              "expected_behavior": "Calls get_app_sdk_versions: Signal Weather Demo runs 2.1.0 (about 80% of DAU) and 2.0.3 (about 20%); Signal Runner Demo runs 2.1.0 (100%)."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated request: no Wavebrook tool should be called",
+              "prompt": "What's the weather in London tomorrow?"
+            },
+            {
+              "description": "Deleting an app isn't supported; it's done in the Wavebrook Dashboard",
+              "prompt": "Delete my app Signal Runner Demo."
+            },
+            {
+              "description": "Another account's data: the tools only reach the connected account and answer that the app isn't found",
+              "prompt": "Show me the stats of app 00000000-0000-0000-0000-000000000000."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This app doesn't sell products or process payments. It reports a publisher's earnings and payouts but can't move money."
+      },
+      "publication": {
+        "release_notes": "First release: app statistics and reports, earnings, payouts and invoices, account health, NetSignal SDK versions, and adding or renaming apps."
       }
     }
   }

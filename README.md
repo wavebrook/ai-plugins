@@ -186,7 +186,7 @@ OpenClaw loads the MCP server from the plugin. Its docs don't yet confirm OAuth 
 
 ## Support
 
-Email [contact@wavebrook.com](mailto:contact@wavebrook.com).
+Email [hello@wavebrook.com](mailto:hello@wavebrook.com).
 
 ## Licence
 
