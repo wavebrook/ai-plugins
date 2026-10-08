@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wavebrook",
   "version": "1.0.0",
-  "description": "Ask about your NetSignal SDK apps, statistics, earnings, payouts and invoices in the Wavebrook Dashboard.",
+  "description": "Ask about your apps, statistics, earnings, payouts and invoices in the Wavebrook Dashboard.",
   "author": {
     "name": "Wavebrook Analytics Ltd",
     "email": "hello@wavebrook.com",
@@ -11,13 +11,13 @@
   "homepage": "https://wavebrook.com/ai-assistants",
   "repository": "https://github.com/wavebrook/ai-plugins",
   "license": "MIT",
-  "keywords": ["wavebrook", "netsignal-sdk", "mcp", "publisher", "earnings", "payouts"],
+  "keywords": ["wavebrook", "apps", "mcp", "publisher", "earnings", "payouts"],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Wavebrook",
-        "shortDescription": "Your NetSignal SDK earnings",
-        "longDescription": "Wavebrook pays mobile-app publishers for integrating the NetSignal SDK, which collects network telemetry with each end user's consent. This app brings your Wavebrook Dashboard account into the conversation.\n\nAsk how your apps are doing: DAU, location DAU, consent and location rates, and the countries your users are in. Compare periods, see which Partners earned the most and from which apps, and check your payouts. Get a download link for any invoice. Find out what needs your attention, such as updated terms, a privacy policy missing our disclosure, or an app that stopped sending data. See which NetSignal SDK versions your apps run.\n\nIf you allow changes when you connect, it can also add an app from its store link, rename an app, refresh it from the store and mark notifications as read. It can't accept terms, change payout details or delete anything.\n\nYou need a Wavebrook Dashboard account. It only sees your own account, and you can disconnect it at any time in Account, Connected apps.",
+        "shortDescription": "Apps, earnings and payouts",
+        "longDescription": "Bring your Wavebrook Dashboard account into the conversation. Wavebrook pays mobile-app publishers for the products they integrate in their apps, and the dashboard is where you follow your apps and get paid.\n\nAsk how your apps are doing: DAU, location DAU, consent and location rates, and the countries your users are in. Compare periods, see which Partners earned the most and from which apps, and check your payouts. Get a download link for any invoice. Find out what needs your attention, such as updated terms, a privacy policy missing our disclosure, or an app that stopped sending data. See which SDK versions your apps run.\n\nIf you allow changes when you connect, it can also add an app from its store link, rename an app, refresh it from the store and mark notifications as read. It can't accept terms, change payout details or delete anything.\n\nYou need a Wavebrook Dashboard account. It only sees your own account, and you can disconnect it at any time in Account, Connected apps.",
         "developerName": "Wavebrook Analytics Ltd",
         "category": "Productivity",
         "capabilities": [
@@ -71,8 +71,8 @@
               "expected_behavior": "Finds the app with list_apps, then calls get_app_stats and reports average DAU and location DAU with their change against the previous 30 days, consent about 82%, location about 55%, and top countries GB, ES, US and DE."
             },
             {
-              "description": "NetSignal SDK versions per app",
-              "prompt": "Which NetSignal SDK versions are my apps running?",
+              "description": "SDK versions per app",
+              "prompt": "Which SDK versions are my apps running?",
               "tools_triggered": "get_app_sdk_versions",
               "expected_behavior": "Calls get_app_sdk_versions: Signal Weather Demo runs 2.1.0 (about 80% of DAU) and 2.0.3 (about 20%); Signal Runner Demo runs 2.1.0 (100%)."
             }
@@ -96,7 +96,7 @@
         "commerce_description": "This app doesn't sell products or process payments. It reports a publisher's earnings and payouts but can't move money."
       },
       "publication": {
-        "release_notes": "First release: app statistics and reports, earnings, payouts and invoices, account health, NetSignal SDK versions, and adding or renaming apps."
+        "release_notes": "First release: app statistics and reports, earnings, payouts and invoices, account health, SDK versions, and adding or renaming apps."
       }
     }
   }

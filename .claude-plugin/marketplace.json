@@ -10,7 +10,7 @@
     {
       "name": "wavebrook",
       "source": "./plugins/wavebrook",
-      "description": "Ask about your NetSignal SDK apps, earnings and payouts in the Wavebrook Dashboard",
+      "description": "Ask about your apps, statistics, earnings, payouts and invoices in the Wavebrook Dashboard",
       "category": "productivity"
     }
   ]

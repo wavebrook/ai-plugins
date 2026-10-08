@@ -1,17 +1,17 @@
 ---
 name: wavebrook
-description: Use when the user asks about Wavebrook, the Wavebrook Dashboard, the NetSignal SDK, their apps' DAU, consent or location stats, app earnings, revenue by Partner, payouts, invoices, alerts, SDK versions, what needs their attention, terms to accept, or adding or renaming an app. Uses the wavebrook MCP server tools.
+description: Use when the user asks about Wavebrook, the Wavebrook Dashboard, their apps' DAU, consent or location stats, app earnings, revenue by Partner, payouts, invoices, alerts, SDK versions, what needs their attention, terms to accept, or adding or renaming an app. Uses the wavebrook MCP server tools.
 ---
 
 # Wavebrook
 
-Wavebrook ships the NetSignal SDK, a library for Android and iOS apps. With each end user's consent, the SDK sends pseudonymous network telemetry to network-analytics Partners. The publisher earns a revenue share, paid monthly. It isn't advertising and doesn't identify end users.
+Wavebrook is a platform for mobile-app publishers. Publishers integrate Wavebrook's products in their Android and iOS apps, and network-analytics Partners pay for the consented data those apps provide. The publisher earns a revenue share, paid monthly. It isn't advertising and doesn't identify end users.
 
 The user is a publisher. The `wavebrook` tools act on their own account only.
 
 ## Vocabulary
 
-- **NetSignal SDK**: always the full name, never "NetSignal" alone.
+- **Products**: Wavebrook offers more than one product. Use the names the tools return (an SDK version, a terms document) and don't assume the publisher uses a particular one.
 - **Publisher**: the user. Not "customer" or "client".
 - **App**: one of the publisher's mobile apps. Its `id` is the app key the SDK is initialised with. Never say "asset".
 - **Partner**: a network-analytics company that receives the data. Wavebrook enables Partners on each app.
@@ -56,7 +56,7 @@ The user is a publisher. The `wavebrook` tools act on their own account only.
 2. `get_app_stats` for the recent range, for example the last 7 days.
 3. `get_app_stats` for an earlier range of the same length as a baseline.
 4. Compare DAU, location DAU, consent % and location %:
-   - DAU down, percentages flat: fewer people opening the app. Not a NetSignal SDK issue.
+   - DAU down, percentages flat: fewer people opening the app. Not an SDK issue.
    - Consent % down: the consent prompt changed or is shown less often.
    - Location % down: the location-permission prompt is declined more often.
    - Everything at zero: the SDK isn't sending data. Check the release, the app key and the consent flow.
@@ -70,7 +70,7 @@ The user is a publisher. The `wavebrook` tools act on their own account only.
 2. Ask for the Google Play or App Store link, or the platform and bundle ID.
 3. Confirm: "I'll add <app> to your Wavebrook account. Go ahead?"
 4. `register_app`. If it says the app is already registered on this account, use `list_apps` to find its app key. If it's registered to another account, the publisher contacts hello@wavebrook.com.
-5. Give the `appKey` and the `integrationGuide` link. The publisher initialises the NetSignal SDK with that key.
+5. Give the `appKey` and the `integrationGuide` link. The publisher initialises the SDK with that key.
 6. Remind them of the next steps: run a consent prompt, add our standard disclosure text to the privacy policy, ship the release. Partner activation is handled by Wavebrook.
 
 ## Workflow: what's blocking my payout
@@ -90,5 +90,5 @@ The user is a publisher. The `wavebrook` tools act on their own account only.
 
 ## Workflow: is my SDK up to date
 
-1. `get_app_sdk_versions` (all apps, or one with `appId`). It shows the NetSignal SDK versions each app runs, by share of DAU, on its latest day with data.
+1. `get_app_sdk_versions` (all apps, or one with `appId`). It shows the SDK versions each app runs, by share of DAU, on its latest day with data.
 2. Point out apps still running an older version, and the share of users on it. The Publisher Guidelines ask publishers to update within 30 days of a release.

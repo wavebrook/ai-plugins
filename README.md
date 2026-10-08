@@ -1,6 +1,6 @@
 # Wavebrook for AI assistants
 
-Connect your AI assistant to your [Wavebrook Dashboard](https://dashboard.wavebrook.com) account. Ask how your NetSignal SDK apps are doing, what you earned and what's holding up a payout, in plain language.
+Connect your AI assistant to your [Wavebrook Dashboard](https://dashboard.wavebrook.com) account. Ask how your apps are doing, what you earned and what's holding up a payout, in plain language.
 
 This repo packages the Wavebrook remote MCP server for Claude, ChatGPT, Codex, Cursor, VS Code, Gemini CLI and others. It also ships one skill that teaches the assistant our vocabulary, metrics and common workflows.
 
