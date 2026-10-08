@@ -93,12 +93,12 @@ codex mcp login wavebrook
 
 ### Cursor
 
-[Add to Cursor](https://cursor.com/en/install-mcp?name=wavebrook&config=eyJ1cmwiOiJodHRwczovL2Rhc2hib2FyZC53YXZlYnJvb2suY29tL2FwaS9tY3AifQ==)
+[Add to Cursor](https://cursor.com/en/install-mcp?name=wavebrook&config=eyJ1cmwiOiJodHRwczovL21jcC53YXZlYnJvb2suY29tL21jcCJ9)
 
 If the link doesn't open Cursor, paste this deeplink into your browser:
 
 ```
-cursor://anysphere.cursor-deeplink/mcp/install?name=wavebrook&config=eyJ1cmwiOiJodHRwczovL2Rhc2hib2FyZC53YXZlYnJvb2suY29tL2FwaS9tY3AifQ==
+cursor://anysphere.cursor-deeplink/mcp/install?name=wavebrook&config=eyJ1cmwiOiJodHRwczovL21jcC53YXZlYnJvb2suY29tL21jcCJ9
 ```
 
 Or add it to `~/.cursor/mcp.json`:
@@ -120,7 +120,7 @@ Cursor also reads the plugin in this repo, skill included.
 Paste this install link into your browser:
 
 ```
-vscode:mcp/install?%7B%22name%22%3A%22wavebrook%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdashboard.wavebrook.com%2Fapi%2Fmcp%22%7D
+vscode:mcp/install?%7B%22name%22%3A%22wavebrook%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.wavebrook.com%2Fmcp%22%7D
 ```
 
 Or add it to `.vscode/mcp.json`:
