@@ -11,13 +11,13 @@
   "homepage": "https://wavebrook.com/ai-assistants",
   "repository": "https://github.com/wavebrook/ai-plugins",
   "license": "MIT",
-  "keywords": ["wavebrook", "apps", "mcp", "publisher", "earnings", "payouts"],
+  "keywords": ["wavebrook", "apps", "mcp", "publisher", "earnings", "payouts", "netsignal"],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Wavebrook",
         "shortDescription": "Apps, earnings and payouts",
-        "longDescription": "Bring your Wavebrook Dashboard account into the conversation. Wavebrook is a data monetisation platform for mobile-app publishers, and the dashboard is where you follow your apps and get paid.\n\nAsk how your apps are doing: DAU, location DAU, consent and location rates, and the countries your users are in. Compare periods, see which Partners earned the most and from which apps, and check your payouts. Get a download link for any invoice. Find out what needs your attention, such as updated terms, a privacy policy missing our disclosure, or an app that stopped sending data. See which SDK versions your apps run.\n\nIf you allow changes when you connect, it can also add an app from its store link, rename an app, refresh it from the store and mark notifications as read. It can't accept terms, change payout details or delete anything.\n\nYou need a Wavebrook Dashboard account. It only sees your own account, and you can disconnect it at any time in Account, Connected apps.",
+        "longDescription": "Bring your Wavebrook Dashboard account into the conversation. Wavebrook is a data monetisation platform for mobile-app publishers, and the dashboard is where you follow your apps and get paid. Its main product today is the NetSignal SDK.\n\nAsk how your apps are doing: DAU, location DAU, consent and location rates, and the countries your users are in. Compare periods, see which Partners earned the most and from which apps, and check your payouts. Get a download link for any invoice. Find out what needs your attention, such as updated terms, a privacy policy missing our disclosure, or an app that stopped sending data. See which SDK versions your apps run.\n\nIf you allow changes when you connect, it can also add an app from its store link, rename an app, refresh it from the store and mark notifications as read. It can't accept terms, change payout details or delete anything.\n\nYou need a Wavebrook Dashboard account. It only sees your own account, and you can disconnect it at any time in Account, Connected apps.",
         "developerName": "Wavebrook Analytics Ltd",
         "category": "Productivity",
         "capabilities": [

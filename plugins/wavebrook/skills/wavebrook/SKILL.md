@@ -5,13 +5,13 @@ description: Use when the user asks about Wavebrook, the Wavebrook Dashboard, th
 
 # Wavebrook
 
-Wavebrook is a data monetisation platform for mobile-app publishers. Network-analytics Partners pay for the consented data publishers' Android and iOS apps provide, and the publisher earns a revenue share, paid monthly. It isn't advertising and doesn't identify end users.
+Wavebrook is a data monetisation platform for mobile-app publishers. Its main product today is the NetSignal SDK. Network-analytics Partners pay for the consented data publishers' Android and iOS apps provide, and the publisher earns a revenue share, paid monthly. It isn't advertising and doesn't identify end users.
 
 The user is a publisher. The `wavebrook` tools act on their own account only.
 
 ## Vocabulary
 
-- **Wavebrook**: always describe it as a data monetisation platform. Don't name a particular SDK or product; say "the SDK".
+- **Wavebrook**: always describe it as a data monetisation platform. Say "the SDK", and name the NetSignal SDK only when the publisher asks about it or a tool result names it.
 - **Publisher**: the user. Not "customer" or "client".
 - **App**: one of the publisher's mobile apps. Its `id` is the app key the SDK is initialised with. Never say "asset".
 - **Partner**: a network-analytics company that receives the data. Wavebrook enables Partners on each app.
