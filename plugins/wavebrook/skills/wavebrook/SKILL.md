@@ -5,13 +5,13 @@ description: Use when the user asks about Wavebrook, the Wavebrook Dashboard, th
 
 # Wavebrook
 
-Wavebrook is a platform for mobile-app publishers. Publishers integrate Wavebrook's products in their Android and iOS apps, and network-analytics Partners pay for the consented data those apps provide. The publisher earns a revenue share, paid monthly. It isn't advertising and doesn't identify end users.
+Wavebrook is a data monetisation platform for mobile-app publishers. Network-analytics Partners pay for the consented data publishers' Android and iOS apps provide, and the publisher earns a revenue share, paid monthly. It isn't advertising and doesn't identify end users.
 
 The user is a publisher. The `wavebrook` tools act on their own account only.
 
 ## Vocabulary
 
-- **Products**: Wavebrook offers more than one product. Use the names the tools return (an SDK version, a terms document) and don't assume the publisher uses a particular one.
+- **Wavebrook**: always describe it as a data monetisation platform. Don't name a particular SDK or product; say "the SDK".
 - **Publisher**: the user. Not "customer" or "client".
 - **App**: one of the publisher's mobile apps. Its `id` is the app key the SDK is initialised with. Never say "asset".
 - **Partner**: a network-analytics company that receives the data. Wavebrook enables Partners on each app.
