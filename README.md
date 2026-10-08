@@ -7,7 +7,7 @@ This repo packages the Wavebrook remote MCP server for Claude, ChatGPT, Codex, C
 MCP server URL:
 
 ```
-https://dashboard.wavebrook.com/api/mcp
+https://mcp.wavebrook.com/mcp
 ```
 
 You sign in with your Wavebrook Dashboard account. There are no API keys to copy.
@@ -35,7 +35,7 @@ Some things stay in the dashboard: accepting updated terms, payout details, and 
 
 1. Go to **Customize → Connectors**.
 2. Click **Add custom connector**.
-3. Enter the name `Wavebrook` and the URL `https://dashboard.wavebrook.com/api/mcp`.
+3. Enter the name `Wavebrook` and the URL `https://mcp.wavebrook.com/mcp`.
 4. Click **Add**, then **Connect** and sign in.
 
 On Team and Enterprise plans, an Owner adds it at **Organization settings → Connectors → Add → Custom → Web**. Members then connect from **Customize → Connectors**. If the dialog asks for an OAuth client, choose **Register automatically**.
@@ -52,7 +52,7 @@ claude plugin install wavebrook@wavebrook
 Or add only the server:
 
 ```sh
-claude mcp add --transport http wavebrook https://dashboard.wavebrook.com/api/mcp
+claude mcp add --transport http wavebrook https://mcp.wavebrook.com/mcp
 ```
 
 Then run `/mcp` in Claude Code and sign in.
@@ -63,7 +63,7 @@ Developer mode is available on the web for Plus, Pro, Business, Enterprise and E
 
 1. Open **Settings → Security and login** and turn on **Developer mode**.
 2. Go to [ChatGPT Plugins](https://chatgpt.com/plugins) and select the plus button.
-3. Enter the name `Wavebrook` and the MCP server URL `https://dashboard.wavebrook.com/api/mcp`. Choose OAuth if asked.
+3. Enter the name `Wavebrook` and the MCP server URL `https://mcp.wavebrook.com/mcp`. Choose OAuth if asked.
 4. Sign in when prompted.
 
 On Business and Enterprise workspaces, your admin may need to enable developer mode first.
@@ -82,7 +82,7 @@ Or add only the server to `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.wavebrook]
-url = "https://dashboard.wavebrook.com/api/mcp"
+url = "https://mcp.wavebrook.com/mcp"
 ```
 
 Then sign in:
@@ -107,7 +107,7 @@ Or add it to `~/.cursor/mcp.json`:
 {
   "mcpServers": {
     "wavebrook": {
-      "url": "https://dashboard.wavebrook.com/api/mcp"
+      "url": "https://mcp.wavebrook.com/mcp"
     }
   }
 }
@@ -130,7 +130,7 @@ Or add it to `.vscode/mcp.json`:
   "servers": {
     "wavebrook": {
       "type": "http",
-      "url": "https://dashboard.wavebrook.com/api/mcp"
+      "url": "https://mcp.wavebrook.com/mcp"
     }
   }
 }
@@ -154,7 +154,7 @@ Community-tested only. Add this to your MCP config file (`mcp_config.json`):
 {
   "mcpServers": {
     "wavebrook": {
-      "serverUrl": "https://dashboard.wavebrook.com/api/mcp"
+      "serverUrl": "https://mcp.wavebrook.com/mcp"
     }
   }
 }

@@ -4,7 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = new URL('..', import.meta.url).pathname;
-const URL_ = 'https://dashboard.wavebrook.com/api/mcp';
+const URL_ = 'https://mcp.wavebrook.com/mcp';
 const errors = [];
 
 const walk = (dir) =>

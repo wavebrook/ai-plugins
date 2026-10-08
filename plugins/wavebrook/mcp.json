@@ -3,7 +3,7 @@
   "mcpServers": {
     "wavebrook": {
       "type": "streamable-http",
-      "url": "https://dashboard.wavebrook.com/api/mcp"
+      "url": "https://mcp.wavebrook.com/mcp"
     }
   }
 }
