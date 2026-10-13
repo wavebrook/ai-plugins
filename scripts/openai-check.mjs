@@ -38,7 +38,9 @@ max('displayName', ui.displayName, 30);
 max('shortDescription', ui.shortDescription, 30);
 max('longDescription', ui.longDescription, 4000);
 max('developerName', ui.developerName, 80);
-max('category', ui.category, 200);
+// developers.openai.com/plugins/deploy/submission-errors (plugin_category_unknown)
+const CATEGORIES = ['Productivity', 'Creativity', 'Developer Tools', 'Business & Operations', 'Data & Analytics', 'Communication', 'Education & Research', 'Security', 'Finance', 'Healthcare', 'Travel', 'Entertainment', 'Other'];
+if (!CATEGORIES.includes(ui.category)) err(`category must be one of: ${CATEGORIES.join(', ')}`);
 for (const k of ['websiteURL', 'supportURL', 'privacyPolicyURL', 'termsOfServiceURL']) https(k, ui[k]);
 const caps = ui.capabilities ?? [];
 if (caps.length > 20 || caps.some((c) => c.length > 120)) err('capabilities: max 20, 120 characters each');
